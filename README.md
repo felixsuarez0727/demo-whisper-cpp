@@ -118,60 +118,19 @@ This will start the FastAPI application, and you can access the endpoint at `htt
 
 <img src="./imgs/endpoint_results.png"/>
 
-## 🌐🌏 Using the DockerFile for the FastAPI Endpoint:
-
-1. Build the Docker image named `Dockerfile`:
-
-```bash
-docker build -t dockerfile_endpoint .
-```
-
-<img src="./imgs/build_dockerfile_endpoint.png"/>
-
-2. Run the Docker Container:
-
-```bash
-docker run -p 80:8000 dockerfile_endpoint
-```
-
-<img src="./imgs/build_dockerfile_endpoint.png"/>
-
-This will start the FastAPI application, and you can access the endpoint at `http://localhost/docs#/default/transcribe_audio_transcribe_audio__post`.
-
-4. **Results**
-
-<img src="./imgs/docker_endpoint_results.png"/>
-
-## 🕵️ Audio File Testing on 4CPU / 4GB GCP Instance
-
-1. Audio `gb1.wav`
-
-Processing Time: `0 hours, 7 minutes, 4 seconds`
-
-<img src="./imgs/audio_gb1_results.png"/>
-
-2. Audio `hp0.wav`
-
-Processing Time: `0 hours, 9 minutes, 32 seconds`
-
-<img src="./imgs/audio_hp0_results.png"/>
-
-3. Audio `mm0.wav`
-
-Processing Time: `0 hours, 2 minutes, 47 seconds`
-
-<img src="./imgs/audio_mm0_results.png"/>
-
-**_Comparative table_**
-
-| Audio File | Hours | Minutes | Seconds |
-| ---------- | ----- | ------- | ------- |
-| gb1.wav    | 0     | 7       | 4       |
-| hp0.wav    | 0     | 9       | 32      |
-| mm0.wav    | 0     | 2       | 47      |
-
 ## 🕵️ Audio File Testing on 6CPU cores / 16GB Local Machine
 
 1. All audios:
+
+**_Comparative table_**
+
+(Run with docker)
+
+| Audio File | Hours | Minutes | Seconds |
+| ---------- | ----- | ------- | ------- |
+| gb0.wav    | 0     | 0       | 4       |
+| gb1.wav    | 0     | 0       | 4       |
+| hp0.wav    | 0     | 0       | 32      |
+| mm0.wav    | 0     | 0       | 47      |
 
 <img src="./imgs/local_test_results.png"/>

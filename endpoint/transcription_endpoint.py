@@ -18,21 +18,20 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Initialize Whisper model
-w = Whisper("tiny")  # Options: "tiny", "small", "base", "medium", "large"
-
 
 @app.post("/transcribe_audio/")
 async def transcribe_audio(file: UploadFile = File(...)):
-    try:
-        # Create a temporary directory to store the uploaded audio file
-        temp_dir = "./temp"
-        os.makedirs(temp_dir, exist_ok=True)
-        audio_path = os.path.join(temp_dir, file.filename)
+    # Initialize Whisper model
+    w = Whisper("tiny")  # Options: "tiny", "small", "base", "medium", "large"
+    # Create a temporary directory to store the uploaded audio file
+    temp_dir = "temp"
+    os.makedirs(temp_dir, exist_ok=True)
+    audio_path = os.path.join(temp_dir, file.filename)
 
-        # Save the uploaded audio file
-        with open(audio_path, "wb") as buffer:
-            shutil.copyfileobj(file.file, buffer)
+    # Save the uploaded audio file
+    with open(audio_path, "wb") as buffer:
+        shutil.copyfileobj(file.file, buffer)
+    try:
 
         start_time = time.time()
 
