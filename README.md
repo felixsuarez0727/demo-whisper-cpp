@@ -128,9 +128,9 @@ This will start the FastAPI application, and you can access the endpoint at `htt
 
 | Audio File | Hours | Minutes | Seconds |
 | ---------- | ----- | ------- | ------- |
-| gb0.wav    | 0     | 0       | 4       |
-| gb1.wav    | 0     | 0       | 4       |
-| hp0.wav    | 0     | 0       | 32      |
-| mm0.wav    | 0     | 0       | 47      |
+| gb0.wav    | 0     | 0       | 7       |
+| gb1.wav    | 0     | 0       | 9       |
+| hp0.wav    | 0     | 0       | 13      |
+| mm0.wav    | 0     | 0       | 1       |
 
-<img src="./imgs/local_test_results.png"/>
+<img src="./imgs/docker_results_inside_container.png"/>
