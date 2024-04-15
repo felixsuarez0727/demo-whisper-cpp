@@ -22,7 +22,7 @@ app.add_middleware(
 @app.post("/transcribe_audio/")
 async def transcribe_audio(file: UploadFile = File(...)):
     # Initialize Whisper model
-    w = Whisper("tiny")  # Options: "tiny", "small", "base", "medium", "large"
+    w = Whisper("small")  # Options: "tiny", "small", "base", "medium", "large"
     # Create a temporary directory to store the uploaded audio file
     temp_dir = "temp"
     os.makedirs(temp_dir, exist_ok=True)

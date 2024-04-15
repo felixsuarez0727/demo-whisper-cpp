@@ -3,7 +3,7 @@ import time
 from whispercpp import Whisper
 from tabulate import tabulate
 
-w = Whisper("tiny")  # Options: "tiny", "small", "base", "medium", "large"
+w = Whisper("small")  # Options: "tiny", "small", "base", "medium", "large"
 
 # Directory containing audio files for testing
 audio_folder = "./audios_for_testing"
@@ -51,7 +51,8 @@ print()
 print(tabulate(results, headers=["Audio File", "Hours", "Minutes", "Seconds"]))
 
 # Calculate total processing time
-total_processing_time_seconds = sum(file[1] * 3600 + file[2] * 60 + file[3] for file in results)
+total_processing_time_seconds = sum(
+    file[1] * 3600 + file[2] * 60 + file[3] for file in results)
 total_hours = int(total_processing_time_seconds // 3600)
 total_minutes = int((total_processing_time_seconds % 3600) // 60)
 total_seconds = int(total_processing_time_seconds % 60)

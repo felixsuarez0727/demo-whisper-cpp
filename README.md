@@ -1,6 +1,6 @@
 # 🤖 Whisper Text Transcription
 
-This Python script utilizes [whisper-cpp](https://github.com/ggerganov/whisper.cpp/) package, which is a custom inference implementation of OpenAI's Whisper model used for transcribing WAV audio files to text. [OpenAI's Whisper model](https://github.com/openai/whisper) is an advanced implementation of Automatic Speech Recognition (ASR). It employs modern deep learning techniques to accurately transcribe human speech into text. Whisper has been trained on a large amount of high-quality audio data, enabling it to recognize a wide range of dialects and accents. Its accuracy and speed make it ideal for real-time transcription applications.
+This Python script utilizes [whisper-cpp](https://github.com/ggerganov/whisper.cpp/) package, which is a custom inference implementation of OpenAI's `small` Whisper model used for transcribing WAV audio files to text. [OpenAI's Whisper model](https://github.com/openai/whisper) is an advanced implementation of Automatic Speech Recognition (ASR). It employs modern deep learning techniques to accurately transcribe human speech into text. Whisper has been trained on a large amount of high-quality audio data, enabling it to recognize a wide range of dialects and accents. Its accuracy and speed make it ideal for real-time transcription applications.
 
 ## 🛠️Prerequisites
 
@@ -128,9 +128,11 @@ This will start the FastAPI application, and you can access the endpoint at `htt
 
 | Audio File | Hours | Minutes | Seconds |
 | ---------- | ----- | ------- | ------- |
-| gb0.wav    | 0     | 0       | 7       |
-| gb1.wav    | 0     | 0       | 9       |
-| hp0.wav    | 0     | 0       | 13      |
-| mm0.wav    | 0     | 0       | 1       |
+| gb0.wav    | 0     | 0       | 49      |
+| gb1.wav    | 0     | 1       | 12      |
+| hp0.wav    | 0     | 1       | 36      |
+| mm0.wav    | 0     | 0       | 18      |
+
+**Total Processing Time: 3 minutes, 55 seconds**
 
 <img src="./imgs/docker_results_inside_container.png"/>

@@ -1,7 +1,7 @@
 import time
 from whispercpp import Whisper
 
-w = Whisper("tiny") # Options: "tiny", "small", "base", "medium", "large"
+w = Whisper("small")  # Options: "tiny", "small", "base", "medium", "large"
 
 # Record start time
 start_time = time.time()
